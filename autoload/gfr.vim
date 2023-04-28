@@ -100,3 +100,25 @@ function! gfr#filter(pattern) abort
     echohl None
   endif
 endfunction
+
+
+let s:saved_rst = {}
+
+function! gfr#save(rst) abort
+
+  let s:saved_rst[a:rst] = s:rst
+
+endfunction
+
+
+function! gfr#resum(rst) abort
+
+  let r = get(s:saved_rst, a:rst, {})
+
+  if !empty(r)
+    call setqflist([], 'r', {'title': ' ' . len(r) . ' items',
+          \ 'items' : r
+          \ })
+    botright copen
+  endif
+endfunction

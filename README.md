@@ -27,6 +27,8 @@ Plug 'wsdjeg/gfr.vim'
 
 - `:Grep text`: searching text, display results in quickfix windows.
 - `:Filter pattern`: filter searching results based on previous searching results.
+- `:GrepSave name`: save current searching results to cache with a name.
+- `:GrepResum name`: resum searching results from cache by name.
 
 ## Configuration
 
