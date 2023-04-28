@@ -25,7 +25,8 @@ Plug 'wsdjeg/gfr.vim'
 
 ## Usage
 
-- `:Grep`
+- `:Grep text`: searching text, display results in quickfix windows.
+- `:Filter pattern`: filter searching results based on previous searching results.
 
 ## Configuration
 

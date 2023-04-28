@@ -71,3 +71,27 @@ function! s:list()
         \ })
   botright copen
 endfunction
+
+
+"" filter function
+
+function! gfr#filter(pattern) abort
+  let temp_file = tempname()
+  let context = []
+  for item in s:rst
+    call add(context, item.filename . ':' . item.lnum .  ':' . item.text)
+  endfor
+  let s:rst = []
+  let cmd = ['grep', '-inHR', '--exclude-dir', '.git', a:pattern, temp_file]
+  let id =  s:JOB.start(cmd, {
+        \ 'on_stdout' : function('s:grep_stdout'),
+        \ 'on_stderr' : function('s:grep_stderr'),
+        \ 'in_io' : 'null',
+        \ 'on_exit' : function('s:grep_exit'),
+        \ })
+  if id > 0
+    echohl Comment
+    echo 'filtering: ' . a:pattern
+    echohl None
+  endif
+endfunction
