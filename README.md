@@ -1,4 +1,4 @@
-# gfr.vim
+# gfr.vim[WIP]
 
 **g**rep & **f**ilter & **r**eplace in vim/neovim
 
