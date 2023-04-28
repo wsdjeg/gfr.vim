@@ -8,3 +8,6 @@ command! -nargs=* Filter call gfr#filter(<q-args>)
 command! -nargs=1 GrepSave call gfr#save(<q-args>)
 
 command! -nargs=1 GrepResum call gfr#resum(<q-args>)
+
+
+command! -nargs=2 Replace call gfr#replace(<f-args>)

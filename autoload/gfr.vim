@@ -122,3 +122,20 @@ function! gfr#resum(rst) abort
     botright copen
   endif
 endfunction
+
+
+function! gfr#replace(from, to) abort
+  " @fixme the logic should be improved
+  for item in s:rst
+    " the itme is :
+    " {
+    "   filename:
+    "   lnum:
+    "   text:
+    " }
+    let context = readfile(item.filename)
+    let context[item.lnum - 1] = substitute(item.text, a:from, a:to, 'g')
+    call writefile(context, item.filename)
+  endfor
+  checktime
+endfunction

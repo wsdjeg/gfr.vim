@@ -28,3 +28,4 @@ Plug 'wsdjeg/gfr.vim'
 - `:Filter pattern`: filter searching results based on previous searching results.
 - `:GrepSave name`: save current searching results to cache with a name.
 - `:GrepResum name`: resum searching results from cache by name.
+- `:Replace pattern target`: replace pattern to target
