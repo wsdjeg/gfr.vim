@@ -18,8 +18,12 @@ let s:rst = []
 
 
 function! gfr#run(...) abort
-  let expr = get(a:000, 0, input('search expr: '))
-  normal! :
+  if a:0 >= 1
+    let expr = a:1
+  else
+    let expr = input('search expr:')
+    normal! :
+  endif
   let s:rst = []
   let id =  s:JOB.start(s:get_search_cmd(expr), {
         \ 'on_stdout' : function('s:grep_stdout'),
@@ -81,6 +85,7 @@ function! gfr#filter(pattern) abort
   for item in s:rst
     call add(context, item.filename . ':' . item.lnum .  ':' . item.text)
   endfor
+  call writefile(context, temp_file)
   let s:rst = []
   let cmd = ['grep', '-inHR', '--exclude-dir', '.git', a:pattern, temp_file]
   let id =  s:JOB.start(cmd, {
