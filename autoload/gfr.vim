@@ -87,7 +87,7 @@ function! gfr#filter(pattern) abort
   endfor
   call writefile(context, temp_file)
   let s:rst = []
-  let cmd = ['grep', '-inHR', '--exclude-dir', '.git', a:pattern, temp_file]
+  let cmd = ['grep', a:pattern, temp_file]
   let id =  s:JOB.start(cmd, {
         \ 'on_stdout' : function('s:grep_stdout'),
         \ 'on_stderr' : function('s:grep_stderr'),
