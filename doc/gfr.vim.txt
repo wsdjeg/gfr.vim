@@ -1,0 +1,15 @@
+*gfr.vim.txt*	grep & filter & replace in vim/neovim
+wsdjeg                                                               *gfr.vim*
+
+==============================================================================
+CONTENTS                                                    *gfr.vim-contents*
+  1. Introduction..............................................|gfr.vim-intro|
+
+==============================================================================
+INTRODUCTION                                                   *gfr.vim-intro*
+
+gfr.vim provides searching, filtering, and replacing feature for vim and
+neovim.
+
+
+vim:tw=78:ts=8:ft=help:norl:
