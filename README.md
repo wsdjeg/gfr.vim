@@ -2,7 +2,6 @@
 
 **g**rep & **f**ilter & **r**eplace in vim/neovim
 
-
 <!-- vim-markdown-toc GFM -->
 
 - [Into](#into)
@@ -14,12 +13,11 @@
 
 ## Into
 
-`gfr.vim` 提供了搜索、筛选、替换等相关功能。
+`gfr.vim` provides searching, filtering, and replacing feature for vim and neovim.
 
 ## Install
 
 This plugin can be installed via vim plugin manager, for example:
-
 
 ```
 Plug 'wsdjeg/gfr.vim'
@@ -34,4 +32,3 @@ Plug 'wsdjeg/gfr.vim'
 ```lua
 
 ```
-
