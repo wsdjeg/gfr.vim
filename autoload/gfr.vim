@@ -18,7 +18,8 @@ let s:rst = []
 
 
 function! gfr#run(...) abort
-  let expr = get(a:000, 1, input('search expr: '))
+  let expr = get(a:000, 0, input('search expr: '))
+  normal! :
   let s:rst = []
   let id =  s:JOB.start(s:get_search_cmd(expr), {
         \ 'on_stdout' : function('s:grep_stdout'),
