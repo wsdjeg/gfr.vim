@@ -1,4 +1,4 @@
-# gfr.vim[WIP]
+# gfr.vim
 
 **g**rep & **f**ilter & **r**eplace in vim/neovim
 
@@ -7,7 +7,6 @@
 - [Into](#into)
 - [Install](#install)
 - [Usage](#usage)
-- [Configuration](#configuration)
 
 <!-- vim-markdown-toc -->
 
@@ -29,9 +28,3 @@ Plug 'wsdjeg/gfr.vim'
 - `:Filter pattern`: filter searching results based on previous searching results.
 - `:GrepSave name`: save current searching results to cache with a name.
 - `:GrepResum name`: resum searching results from cache by name.
-
-## Configuration
-
-```lua
-
-```
