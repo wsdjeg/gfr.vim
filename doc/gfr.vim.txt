@@ -18,6 +18,9 @@ neovim.
 ==============================================================================
 COMMANDS                                                    *gfr.vim-commands*
 
+:Grep                                                                  *:Grep*
+  Search text with grep. The results will be displayed in quickfix windows.
+
 :Filter                                                              *:Filter*
   start filter mode based on previous searching results.
 

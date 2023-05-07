@@ -1,3 +1,5 @@
+""
+" Search text with grep. The results will be displayed in quickfix windows.
 command! -nargs=* Grep call gfr#run(<f-args>)
 
 ""
