@@ -63,6 +63,11 @@ function! s:grep_exit(id, data, event) abort
         \ 'items' : s:rst
         \ })
   botright copen
+  if empty(s:rst)
+    echohl Comment
+    echo 'no results! '
+    echohl None
+  endif
 endfunction
 
 function! s:get_search_cmd(expr) abort
